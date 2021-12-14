@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/fragment_view"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:layout_gravity="left">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_label_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Event"
+                android:textSize="15dp"
+                android:textColor="@color/lightColorOnPrimary"
+                android:textStyle="bold"
+                android:fontFamily="@font/montserratmedium"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tvinput_description"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:textColor="@color/lightColorOnPrimary"
+                android:hint="Your event"
+                android:fontFamily="@font/montserratregular"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>]
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_label_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:textSize="15dp"
+                android:textColor="@color/lightColorOnPrimary"
+                android:textStyle="bold"
+                android:fontFamily="@font/montserratmedium"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+                <ImageButton
+                    android:id="@+id/button_start_time"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_round_access_time_24_dark" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/container_tvinput_start_time"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:boxStrokeWidth="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:hint="Start">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tvinput_start_time"
+                        android:layout_width="100dp"
+                        android:layout_height="48dp"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:textColorHint="@color/lightColorOnPrimaryHint"
+                        android:textColor="@color/lightColorOnPrimary"
+                        android:lines="1"
+                        android:fontFamily="@font/montserratregular"
+                        android:maxLength="5"
+                        android:gravity="center" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imageview_dash"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/ic_round_remove_24_dark"/>
+
+                <ImageButton
+                    android:id="@+id/button_end_time"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_round_access_time_24_dark"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/container_tvinput_end_time"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:boxStrokeWidth="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:hint="End">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tvinput_end_time"
+                        android:layout_width="100dp"
+                        android:layout_height="48dp"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:textColorHint="@color/lightColorOnPrimaryHint"
+                        android:textColor="@color/lightColorOnPrimary"
+                        android:lines="1"
+                        android:fontFamily="@font/montserratregular"
+                        android:maxLength="5"
+                        android:gravity="center"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_save"
+                android:layout_width="110dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/lightColorSecondary"
+                android:text="SUBMIT"
+                android:textSize="15dp"
+                android:textColor="@color/lightColorOnSecondary"
+                android:fontFamily="@font/montserratbold"
+                android:textStyle="bold"
+                app:cornerRadius="15dp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
